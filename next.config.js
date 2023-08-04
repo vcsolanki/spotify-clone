@@ -4,7 +4,8 @@ const nextConfig = {
         domains: [
             "bcdltcujdbexxtwfdpfh.supabase.co"
         ]
-    }
+    },
+    swcMinify: true
 }
 
 module.exports = nextConfig
