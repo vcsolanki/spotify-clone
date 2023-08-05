@@ -10,6 +10,7 @@ import Slider from "./Slider";
 import usePlayer from "@/hooks/usePlayer";
 import { useEffect, useState } from "react";
 import useSound from "use-sound";
+import { MoonLoader } from "react-spinners";
 
 interface PlayerContentProps {
     song: Song,
