@@ -10,7 +10,7 @@ import Slider from "./Slider";
 import usePlayer from "@/hooks/usePlayer";
 import { useEffect, useState } from "react";
 import useSound from "use-sound";
-import { MoonLoader } from "react-spinners";
+import { BounceLoader, MoonLoader } from "react-spinners";
 
 interface PlayerContentProps {
     song: Song,
@@ -143,7 +143,11 @@ const PlayerContent: React.FC<PlayerContentProps> = ({
                         cursor-pointer
                     "
                     >
-                        <Icon size={30} className="text-black" />
+                        {!sound ?
+                            <BounceLoader size={30} />
+                        :
+                            <Icon size={30} className="text-black" />
+                        }
                     </div>
             </div>
 
@@ -183,7 +187,11 @@ const PlayerContent: React.FC<PlayerContentProps> = ({
                             cursor-pointer
                         "
                     >
-                        <Icon size={30} className="text-black" />
+                        {!sound ?
+                            <BounceLoader size={30} />
+                        :
+                            <Icon size={30} className="text-black" />
+                        }
                     </div>
                     <AiFillStepForward
                         onClick={onPlayNext}
